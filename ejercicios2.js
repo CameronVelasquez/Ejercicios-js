@@ -69,12 +69,12 @@ console.log(esPrimo(numero)); */
 //Ejercicio 5 
 
 /* function susDivisores (){
-    let fivenum = prompt ("Introducir un numero");
+    let numeroIngresado = prompt ("Introducir un numero");
 let num=1;
 
-while (num<=fivenum) {
+while (num<=numeroIngresado) {
     num++;
-    if(fivenum%num==0){
+    if(numeroIngresado%num==0){
         console.log(num);
     }
 
@@ -89,10 +89,10 @@ susDivisores() */
 1, 88]
 
 function unArray(array){
-    let acum = ""
+    let nuevoArray = ""
     for (indices of array){
-     acum += indices + ", ";
-     }console.log(acum)
+     nuevoArray += indices + ", ";
+     }console.log(nuevoArray)
 }
 unArray(array);  */
 
@@ -102,64 +102,64 @@ unArray(array);  */
 /* let array = [10, 5, 45, 50, 2, 15, 55, 60,
     1, 88]
 
-function doubleMyArray(array){
-let index = ""
-    for (indices of array){
-        index += indices*2 + ", ";
-    }console.log(index)
+function duplicarEnArray(array){
+let arrayDeDuplicados = ""
+    for (numeros of array){
+        arrayDeDuplicados += numeros*2 + ", ";
+    }console.log(arrayDeDuplicados)
 }
-doubleMyArray(array);  */
+duplicarEnArray(array);  */
 
 //Ejercicio 8 
 
-/* const miFamilia = [
+/* const arrayFamilia = [
     {
-      nombre: "Juan",
-      edad: 30,
-      genero: "Hombre",
-      parentesco: "Padre"
+      nombre: "Cameron",
+      parentesco: "el hijo mayor",
+      nombreMascota: "Loki",
+      opinionMascota: "es mi mejor amigo"
     },
     {
-      nombre: "Ana",
-      edad: 25,
-      genero: "Mujer",
-      parentesco: "Madre"
+      nombre: "Maruzella",
+      parentesco: "la hija del medio",
+      nombreMascota: "Loki",
+      opinionMascota: "lo adoptó Cameron"
     },
     {
-      nombre: "Alfredo",
-      edad: 5,
-      genero: "Hombre",
-      parentesco: "Hijo"
+      nombre: "Maximiliano",
+      parentesco: "el hijo menor",
+      nombreMascota: "Loki",
+      opinionMascota: "es simpatico"
     },
     {
-      nombre: "Sofía",
-      edad: 3,
-      genero: "Mujer",
-      parentesco: "Hija"
+      nombre: "Pamela",
+      parentesco: "la madre",
+      nombreMascota: "Loki",
+      opinionMascota: "me encanta regalonearlo"
     },
     {
-      nombre: "Mario",
-      edad: 60,
-      genero: "Hombre",
-      parentesco: "Abuelo"
+      nombre: "Neldar",
+      parentesco: "el padre",
+      nombreMascota: "Loki",
+      opinionMascota: "lo extraño mucho cada día"
     }
   ];
   
-  presentarFamilia(miFamilia);
+  presentacionMiembrosFamilia(arrayFamilia);
   
-  function presentarFamilia(familia) {
-    familia.forEach(function(persona) {
-      console.log(`Hola, mi nombre es ${persona.nombre}, tengo ${persona.edad} años, soy ${persona.genero} y mi parentesco es ${persona.parentesco}.`);
+  function presentacionMiembrosFamilia(familia) {
+    familia.forEach(function(familiar) {
+      console.log(`Hola, me llamo ${familiar.nombre}, de mi familia soy ${familiar.parentesco}, mi mascota se llama ${familiar.nombreMascota} y ${familiar.opinionMascota}.`);
     });
   } */
 
 //Ejercicio 9
 
-/* const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+/* const soloImpares = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 for (let i = 0; i < 10; i++) {
-    if (numbers[i] % 2 !== 0) {
-    console.log(numbers[i]);
+    if (soloImpares[i] % 2 !== 0) {
+    console.log(soloImpares[i]);
     }
 } */
 
@@ -292,5 +292,23 @@ function triangulo(caracter) {
 triangulo("*") */
 
 //Ejercicio 16 
+/* 
+let numDesorden = [10, 5, 45, 50, 2, 15, 55, 60,
+    1, 88]
 
-//pendiente
+function ordenarNumeros(array){
+    for(let j = 0; j < array.length; j++){
+        for( let i = 0; i < array.length; i++){
+            let orden = 0
+            if (array[i]< array[i+1]){
+                orden = array[i+1]
+                array[i+1] = array [i]
+                array[i] = orden 
+            }
+        }
+    }
+    console.log(array)
+}
+
+ordenarNumeros(numDesorden)
+ */
